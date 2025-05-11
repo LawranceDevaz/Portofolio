@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainur Rochim | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="fade-in-page">
+    <header>
+        <div class="logo">
+            <a href="#">Zainur();</a>
+        </div>
+        
+        <nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li style="--i:1"><a href="index.html">Home</a></li>
+                <li style="--i:2"><a href="index2.html">About</a></li>
+                <li style="--i:3"><a href="kontak.html">Contact</a></li>
+                <li style="--i:4"><a href="pengalaman.html">Code</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-intro">Hello World, I'm</p>
+                <h1 class="hero-name">Zainur Rochim</h1>
+                <h2 class="hero-role">Fullstack Developer<span class="typing-cursor"></span></h2>
+                <p class="hero-desc">Welcome to my portfolio website</p>
+                
+                <div class="social-links">
+                    <a href="discordapp.com/users/1326505540389699609"><i class="fab fa-discord"></i></a>
+                    <a href="https://github.com/LawranceDevaz"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/mikrocreator.mikrocreator"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/zainur_777?igsh=MTI0aHp2OGIxanJmYg=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="profile-image">
+                <img src="https://media.discordapp.net/attachments/1340484238885257287/1367808954696073266/IMG_20250501_052000_542.jpg?ex=6821239b&is=681fd21b&hm=df7fd84176f286a2fe01d7e1ff877bebaa5db3f88cd98592be4dfcd7ebd5c56a&=&format=webp&width=1791&height=786" alt="Zainur Rochim">
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
+        
+        // Animasi load halaman
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelectorAll('.hero-content, .profile-image').forEach(el => {
+                    el.style.opacity = '1';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>

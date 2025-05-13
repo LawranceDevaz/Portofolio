@@ -25,13 +25,20 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Running Text -->
+<div class="running-text">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    🚀 Welcome to my portfolio website! | Zainur Rochim - Fullstack Developer
+  </marquee>
+</div>
     
     <main>
         <section class="hero">
             <div class="hero-content">
                 <p class="hero-intro">Hello World, I'm</p>
                 <h1 class="hero-name">Zainur Rochim</h1>
-                <h2 class="hero-role">Fullstack Developer<span class="typing-cursor"></span></h2>
+                <h2 class="hero-role"><span id="typing-text"></span><span class="typing-cursor"></span></h2>
                 <p class="hero-desc">Welcome to my portfolio website</p>
                 
                 <div class="social-links">
@@ -73,5 +80,20 @@
             }, 100);
         });
     </script>
+
+<!-- Typed.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Inisialisasi Animasi Ketik -->
+<script>
+    var typed = new Typed('#typing-text', {
+        strings: ['Fullstack Developer', 'Frontend Engineer', 'Backend Builder'],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+    });
+</script>
+
 </body>
 </html>

@@ -380,6 +380,8 @@ nav a:hover::after {
         transition: all 0.3s ease;
     }
     
+    /* === Aesthetic Animated Gradient Background === */
+
     nav ul.show {
         display: flex;
         opacity: 1;
@@ -433,4 +435,47 @@ nav a:hover::after {
         width: 180px;
         height: 180px;
     }
+}
+
+/* Running Text with Box Style */
+.running-text {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    background-color: rgba(77, 166, 255, 0.15); /* semi-transparent box */
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    backdrop-filter: blur(8px); /* blur effect like glass */
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.2);
+}
+
+main {
+    padding-bottom: 80px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    opacity: 0.4;
+    filter: blur(20px);
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

@@ -140,6 +140,29 @@
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 30px;
         }
+
+        /* === Aesthetic Animated Gradient Background === */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            opacity: 0.4;
+            filter: blur(20px);
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         
         .project-card {
             background-color: rgba(25, 25, 25, 0.8);
@@ -489,6 +512,24 @@
             <h2 class="section-title">Project Lainnya</h2>
             <div class="projects-container">
                 
+                <!-- Project Card 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="https://media.discordapp.net/attachments/1340484238885257287/1371649159974617108/image.png?ex=6823e753&is=682295d3&hm=a5a20f2c478350504fd9fbc4cb7dbf706992ef37492187c19eaf11463a5ccbf2&=&format=webp&quality=lossless&width=1452&height=759" alt="Project 2">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web Portofolio</h3>
+                        <p class="project-description">
+                            Project Portofolio Dengan Desain Normal Dan Klasik
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Html</span>
+                            <span class="tech-tag">Css</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project Card 2 -->
                 <div class="project-card fade-in">
                     <div class="project-image">
